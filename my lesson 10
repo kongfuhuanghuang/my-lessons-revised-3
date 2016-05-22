@@ -1,0 +1,39 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pg137_a_look_at_more_method;
+
+/**
+ *
+ * @author huang
+ */
+class Test {
+int a, b;
+Test(int i, int j) {
+a = i;
+b = j;
+}
+// pass an object
+void meth(Test o) {
+o.a *= 2;
+o.b /= 2;
+}
+}
+public class Pg137_a_look_at_more_method {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Test ob = new Test(15, 20);
+        System.out.println("ob.a and ob.b before call: " +
+        ob.a + " " + ob.b);
+        ob.meth(ob);
+        System.out.println("ob.a and ob.b after call: " +
+        ob.a + " " + ob.b);
+    }
+    
+}
