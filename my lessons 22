@@ -1,0 +1,33 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author huang
+ */
+// Objects are passed through their references.
+class Test {
+int a, b;
+Test(int i, int j) {
+a = i;
+b = j;
+}
+// pass an object
+void meth(Test o) {
+o.a *= 2;
+o.b /= 2;
+}
+}
+public class O_A_P_T_T_R {
+public static void main(String args[]) {
+Test ob = new Test(15, 20);
+System.out.println("ob.a and ob.b before call: " +
+ob.a + " " + ob.b);
+ob.meth(ob);
+System.out.println("ob.a and ob.b after call: " +
+ob.a + " " + ob.b);
+}
+}
