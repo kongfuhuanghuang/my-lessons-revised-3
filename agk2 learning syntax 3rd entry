@@ -1,0 +1,135 @@
+
+// Project: FirstProject 
+// Created: 2016-06-10
+
+// set window properties
+/*SetWindowTitle( "FirstProject" )
+SetWindowSize( 1024, 768, 0 )
+
+// set display properties
+SetVirtualResolution( 1024, 768 )
+SetOrientationAllowed( 1, 1, 1, 1 )
+
+Message("Do not covet thy neighbors wife")
+//#option_explicit this option forces variables to be declated by type
+#constant WINNINGSCORE = 1000
+SetWindowTitle("Timer")
+SetWindowSize(1024, 768, 0)
+SetDisplayAspect(1024 / 768.0)*/
+//*** Set window properties ***
+/*SetWindowTitle("Message")
+SetWindowSize(1024, 768, 0)
+SetDisplayAspect(1024 / 768.0)
+//*** Display start up message ***
+Print("Program Starting")
+Sync()
+//time_elapsed# = Timer()*/
+/*SetWindowTitle("Timer")
+SetWindowSize(1024, 768, 0)
+SetDisplayAspect(1024 / 768.0)*/
+/*SetWindowTitle("Message")
+SetWindowSize(1024, 768, 0)
+SetDisplayAspect(1024 / 768.0)
+//*** Display start up message ***
+Print("Program Starting")
+Sync()
+Sleep(2000)*/
+// *** Set window properties ***
+SetWindowTitle("Background")
+SetWindowSize(1024, 768, 0)
+SetDisplayAspect(1024 / 768.0)
+//*** Cycle through random background colours ***
+
+do
+	/*
+    SetWindowAllowResize(1)
+    SetOrientationAllowed(1,0,1,0)
+	//SetPrintColor(255,0,0)
+	SetPrintSize(40)
+    Print("hello world")
+    Print('Help')
+    Print(12)
+    Print(0)
+    Print(-34.6)
+    SetBorderColor(120,120,120)
+    SetPrintColor(255,100,0)
+    SetClearColor(0,100,100)
+    SetPrintSpacing(-3.5)
+    Print(36)
+    Print("Goodbye")
+    y=Sin(0.7854)
+    x=Cos(7)
+    Print(y)
+    Print(x)
+    PrintC("A")
+    PrintC("B")
+    //pg 113
+    Sync()
+    pie#=3.14
+    Print(pie#)
+    mynameis$="space bob"
+    Print("my name is " + mynameis$)
+    Print(WINNINGSCORE)
+    playerscore =1001
+    if playerscore>= WINNINGSCORE
+		Print("congradulations") 
+		endif
+		
+	Print(12-5*12/10-5)	
+	answer=Mod(7,3)
+	Print(answer)
+    time# =Timer()
+    Print(time#)*/
+    
+    
+    
+  /*  
+    total_seconds = Timer()
+//*** Convert to minutes and seconds ***
+minutes = total_seconds / 60
+seconds = Mod(total_seconds, 60)
+//*** Display the result ***
+PrintC("Time elapsed : ")
+PrintC(minutes)
+PrintC(":")
+Print(seconds)
+Sync()
+
+
+*/
+//*** Display time program running ***
+/*PrintC("Program has been running for ")
+PrintC(GetSeconds() )
+Print(" seconds")
+Sync()*/
+//*** Display time ***
+/*PrintC("Time elapsed : ")
+Print(time_elapsed#)
+Sync()*/
+
+//*** Get time elapsed to nearest second ***
+/*total_seconds = Timer()
+//*** Convert to minutes and seconds ***
+minutes = total_seconds / 60
+seconds = Mod(total_seconds, 60)
+//*** Display the result ***
+PrintC("Time elapsed : ")
+PrintC(minutes)
+PrintC(":")
+Print(seconds)
+Sync()*/
+
+//*** Display time program running ***
+/*PrintC("Program has been running for ")
+PrintC(GetSeconds() )
+Print(" seconds")
+Sync()*/
+
+red = Random(0,255)
+green = Random(0,255)
+blue = Random(0,255)
+//*** Clear the screen using the new colour ***
+SetClearColor(red,green,blue)
+Sync()
+loop
+
