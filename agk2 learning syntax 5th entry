@@ -1,0 +1,259 @@
+/*//Code for EnglishToCode:
+// Project: EnglishToCode
+// Created: 2015-01-06
+//*** Other source file used by program ***
+#include "Buttons.agc"
+//*** Set window properties ***
+SetWindowTitle("English To Code")
+SetWindowSize(768, 1024, 0)
+SetDisplayAspect(768/1024.0)
+ClearScreen()
+//*** Display the buttons ***
+SetUpButtons()
+//*** Get two values from the buttons ***
+Print("Enter first number : ")
+Sync()
+Sleep(1000)
+no1 = GetButtonEntry()
+Print("Enter second number : ")
+Sync()
+Sleep(1000)
+no2 = GetButtonEntry()
+do
+//*** If no1 exactly divisible by no2, display
+//message ***
+if Mod(no1,no2) = 0
+Print("Exactly divisible")
+endif
+Sync()
+loop*/
+
+
+/*// Created: 2015-01-06
+//*** Other source file used by program ***
+#include "Buttons.agc"
+//*** Set window properties ***
+SetWindowTitle("English To Code")
+SetWindowSize(768, 1024, 0)
+SetDisplayAspect(768/1024.0)
+ClearScreen()
+//*** Display the buttons ***
+SetUpButtons()
+//*** Get two values from the buttons ***
+Print("Enter first number : ")
+Sync()
+no1 = GetButtonEntry()
+Print("Enter second number : ")
+Sync()
+Sleep(1000)
+no2 = GetButtonEntry()
+//*** Set appropriate message ***
+message$ = ""
+if Mod(no1,no2) = 0
+message$ = "Exactly divisible"
+endif
+do
+//***Display message ***
+Print(message$)
+Sync()
+loop*/
+
+
+// Created: 2015-01-03
+//*** Other source file used by program ***
+/*#include "Buttons.agc"
+//*** Set window properties ***
+SetWindowTitle("Guess")
+SetWindowSize(768, 1024, 0)
+SetDisplayAspect(768/1024.0)
+ClearScreen()
+//*** Display the buttons ***
+SetUpButtons()
+//*** Generate number (0 to 9) ***
+number = Random(0,9)
+//*** Display user prompt ***
+PrintC("Guess what my number is : ")
+Sync()
+Sleep(2000)
+//*** Get an integer value from the buttons ***
+guess = GetButtonEntry()
+do
+//*** If guess isn’t correct, display message ***
+if guess <> number
+Print("Wrong")
+endif
+//*** Display number generated ***
+PrintC("My number was : ")
+Print(number)
+PrintC("Your guess was : ")
+Print(guess)
+Sync()
+loop*/
+
+
+/*// Project: TwoDice
+// Created: 2015-01-09
+//*** Set window properties ***
+SetWindowTitle("Two Dice")
+SetWindowSize(1024, 768, 0)
+SetDisplayAspect(1024/768.0)
+ClearScreen()
+//*** Generate dice values ***
+dice1 = Random(1,6)
+dice2 = Random(1,6)
+total = dice1 + dice2
+do
+//*** If 7 or 11, display win message ***
+if total = 7 or total = 11
+Print("You win!")
+endif
+//*** Display value on dice ***
+PrintC("Dice 1: ")
+Print(dice1)
+PrintC("Dice 2: ")
+Print(dice2)
+Sync()
+loop*/
+
+/*// Project: ThreeDice
+// Created: 2015-01-11
+//*** Set window properties ***
+SetWindowTitle("Three Dice")
+SetWindowSize(1024, 768, 0)
+SetDisplayAspect(1024/768.0)
+ClearScreen()
+// *** Throw dice ***
+dice1 = Random(1,6)
+dice2 = Random(1,6)
+dice3 = Random(1,6)
+// *** If any two dice match set up message ***
+mess$ = ""
+if dice1 = dice2 or dice1 = dice3 or dice2 = dice3
+mess$ = "You win!"
+endif
+do
+//*** Display message ***
+Print(mess$)
+// *** Display values ***
+PrintC("dice 1: ")
+Print(dice1)
+PrintC("dice 2: ")
+Print(dice2)
+PrintC("dice 3: ")
+Print(dice3)
+Sync()
+loop*/
+
+
+/*// Created: 2015-01-011
+//*** Other source file used by program ***
+#include "Buttons.agc"
+//*** Set window properties ***
+SetWindowTitle("Guess")
+SetWindowSize(768, 1024, 0)
+SetDisplayAspect(768/1024.0)
+ClearScreen()
+//*** Display the buttons ***
+SetUpButtons()
+//*** Generate number (0 to 9) ***
+number = Random(0,9)
+//*** Display user prompt ***
+PrintC("Guess what my number is : ")
+Sync()
+Sleep(2000)
+//*** Get an integer value from the buttons ***
+guess = GetButtonEntry()
+do
+//*** Display response to guess ***
+if guess <> number
+Print("Wrong")
+else
+Print("Correct")
+endif
+//*** Display number generated ***
+PrintC("My number was : ")
+Print(number)
+PrintC("Your guess was : ")
+Print(guess)
+Sync()
+loop*/
+
+
+/*// Project: TwoNumbers
+// Created: 2015-01-11
+// *** Include Buttons functions ***
+#include "Buttons.agc"
+//*** Set window properties ***
+SetWindowTitle("Two Numbers")
+SetWindowSize(768, 1024, 0)
+SetDisplayAspect(768/1024.0)
+ClearScreen()
+// *** Display buttons ***
+SetUpButtons()
+// *** Get numbers ***
+Print("Enter first number ")
+Sync()
+Sleep(2000)
+no1 = GetButtonEntry()
+Print("Enter second number ")
+Sync()
+Sleep(2000)
+no2 = GetButtonEntry()
+// *** Determine smaller value ***
+if no1 < no2
+answer = no1
+else
+answer = no2
+endif
+// *** Determine if answer is odd or even ***
+if Mod(answer,2) = 0
+mess$ = "This is an even number"
+else
+mess$ = "This is an odd number"
+endif
+do
+//*** Display smaller ***
+PrintC("Smaller value is ")
+Print(answer)
+//*** Odd or even message ***
+Print(mess$)
+Sync()
+loop*/
+
+
+// Created: 2015-01-011
+//*** Other source file used by program ***
+#include "Buttons.agc"
+//*** Set window properties ***
+SetWindowTitle("Guess")
+SetWindowSize(768, 1024, 0)
+SetDisplayAspect(768/1024.0)
+ClearScreen()
+//*** Display the buttons ***
+SetUpButtons()
+//*** Generate number (0 to 9) ***
+number = Random(0,9)
+//*** Display user prompt ***
+PrintC("Guess what my number is : ")
+Sync()
+Sleep(2000)
+//*** Get an integer value from the buttons ***
+guess = GetButtonEntry()
+do
+//*** Respond to guess ***
+if guess = number
+Print("Correct")
+else
+if guess > number
+Print("Too high")
+else
+Print("Too low")
+endif
+endif
+//*** Display number generated ***
+PrintC("My number was : ")
+Print(number)
+PrintC("Your guess was : ")
+Print(guess)
+Sync()
+loop//5.15
