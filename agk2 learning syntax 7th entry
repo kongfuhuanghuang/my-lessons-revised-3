@@ -1,0 +1,1221 @@
+/*//Code for EnglishToCode:
+// Project: EnglishToCode
+//*** Other source file used by program ***
+#include "Buttons.agc"
+//*** Set window properties ***
+SetWindowTitle("English To Code")
+SetWindowSize(768, 1024, 0)
+SetDisplayAspect(768/1024.0)
+ClearScreen()
+//*** Display the buttons ***
+SetUpButtons()
+//*** Get two values from the buttons ***
+Print("Enter first number : ")
+Sync()
+Sleep(1000)
+no1 = GetButtonEntry()
+Print("Enter second number : ")
+Sync()
+Sleep(1000)
+no2 = GetButtonEntry()
+do
+//*** If no1 exactly divisible by no2, display
+//message ***
+if Mod(no1,no2) = 0
+Print("Exactly divisible")
+endif
+Sync()
+loop*/
+
+
+/*
+//*** Other source file used by program ***
+#include "Buttons.agc"
+//*** Set window properties ***
+SetWindowTitle("English To Code")
+SetWindowSize(768, 1024, 0)
+SetDisplayAspect(768/1024.0)
+ClearScreen()
+//*** Display the buttons ***
+SetUpButtons()
+//*** Get two values from the buttons ***
+Print("Enter first number : ")
+Sync()
+no1 = GetButtonEntry()
+Print("Enter second number : ")
+Sync()
+Sleep(1000)
+no2 = GetButtonEntry()
+//*** Set appropriate message ***
+message$ = ""
+if Mod(no1,no2) = 0
+message$ = "Exactly divisible"
+endif
+do
+//***Display message ***
+Print(message$)
+Sync()
+loop*/
+
+
+//*** Other source file used by program ***
+/*#include "Buttons.agc"
+//*** Set window properties ***
+SetWindowTitle("Guess")
+SetWindowSize(768, 1024, 0)
+SetDisplayAspect(768/1024.0)
+ClearScreen()
+//*** Display the buttons ***
+SetUpButtons()
+//*** Generate number (0 to 9) ***
+number = Random(0,9)
+//*** Display user prompt ***
+PrintC("Guess what my number is : ")
+Sync()
+Sleep(2000)
+//*** Get an integer value from the buttons ***
+guess = GetButtonEntry()
+do
+//*** If guess isn’t correct, display message ***
+if guess <> number
+Print("Wrong")
+endif
+//*** Display number generated ***
+PrintC("My number was : ")
+Print(number)
+PrintC("Your guess was : ")
+Print(guess)
+Sync()
+loop*/
+
+
+/*// Project: TwoDice
+//*** Set window properties ***
+SetWindowTitle("Two Dice")
+SetWindowSize(1024, 768, 0)
+SetDisplayAspect(1024/768.0)
+ClearScreen()
+//*** Generate dice values ***
+dice1 = Random(1,6)
+dice2 = Random(1,6)
+total = dice1 + dice2
+do
+//*** If 7 or 11, display win message ***
+if total = 7 or total = 11
+Print("You win!")
+endif
+//*** Display value on dice ***
+PrintC("Dice 1: ")
+Print(dice1)
+PrintC("Dice 2: ")
+Print(dice2)
+Sync()
+loop*/
+
+/*// Project: ThreeDice
+//*** Set window properties ***
+SetWindowTitle("Three Dice")
+SetWindowSize(1024, 768, 0)
+SetDisplayAspect(1024/768.0)
+ClearScreen()
+// *** Throw dice ***
+dice1 = Random(1,6)
+dice2 = Random(1,6)
+dice3 = Random(1,6)
+// *** If any two dice match set up message ***
+mess$ = ""
+if dice1 = dice2 or dice1 = dice3 or dice2 = dice3
+mess$ = "You win!"
+endif
+do
+//*** Display message ***
+Print(mess$)
+// *** Display values ***
+PrintC("dice 1: ")
+Print(dice1)
+PrintC("dice 2: ")
+Print(dice2)
+PrintC("dice 3: ")
+Print(dice3)
+Sync()
+loop*/
+
+
+/*
+//*** Other source file used by program ***
+#include "Buttons.agc"
+//*** Set window properties ***
+SetWindowTitle("Guess")
+SetWindowSize(768, 1024, 0)
+SetDisplayAspect(768/1024.0)
+ClearScreen()
+//*** Display the buttons ***
+SetUpButtons()
+//*** Generate number (0 to 9) ***
+number = Random(0,9)
+//*** Display user prompt ***
+PrintC("Guess what my number is : ")
+Sync()
+Sleep(2000)
+//*** Get an integer value from the buttons ***
+guess = GetButtonEntry()
+do
+//*** Display response to guess ***
+if guess <> number
+Print("Wrong")
+else
+Print("Correct")
+endif
+//*** Display number generated ***
+PrintC("My number was : ")
+Print(number)
+PrintC("Your guess was : ")
+Print(guess)
+Sync()
+loop*/
+
+
+/*// Project: TwoNumbers
+
+// *** Include Buttons functions ***
+#include "Buttons.agc"
+//*** Set window properties ***
+SetWindowTitle("Two Numbers")
+SetWindowSize(768, 1024, 0)
+SetDisplayAspect(768/1024.0)
+ClearScreen()
+// *** Display buttons ***
+SetUpButtons()
+// *** Get numbers ***
+Print("Enter first number ")
+Sync()
+Sleep(2000)
+no1 = GetButtonEntry()
+Print("Enter second number ")
+Sync()
+Sleep(2000)
+no2 = GetButtonEntry()
+// *** Determine smaller value ***
+if no1 < no2
+answer = no1
+else
+answer = no2
+endif
+// *** Determine if answer is odd or even ***
+if Mod(answer,2) = 0
+mess$ = "This is an even number"
+else
+mess$ = "This is an odd number"
+endif
+do
+//*** Display smaller ***
+PrintC("Smaller value is ")
+Print(answer)
+//*** Odd or even message ***
+Print(mess$)
+Sync()
+loop*/
+
+
+/*
+//*** Other source file used by program ***
+#include "Buttons.agc"
+//*** Set window properties ***
+SetWindowTitle("Guess")
+SetWindowSize(768, 1024, 0)
+SetDisplayAspect(768/1024.0)
+ClearScreen()
+//*** Display the buttons ***
+SetUpButtons()
+//*** Generate number (0 to 9) ***
+number = Random(0,9)
+//*** Display user prompt ***
+PrintC("Guess what my number is : ")
+Sync()
+Sleep(2000)
+//*** Get an integer value from the buttons ***
+guess = GetButtonEntry()
+do
+//*** Respond to guess ***
+if guess = number
+Print("Correct")
+else
+if guess > number
+Print("Too high")
+else
+Print("Too low")
+endif
+endif
+//*** Display number generated ***
+PrintC("My number was : ")
+Print(number)
+PrintC("Your guess was : ")
+Print(guess)
+Sync()
+loop//5.15*/
+
+
+
+/*// Project: ScreenSize
+
+//*** Window title and size ***
+SetWindowTitle("Screen Size")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+//*** Clear the screen ***
+ClearScreen()
+//*** Get screen dimensions ***
+screenwidth = GetMaxDeviceWidth()
+screenheight = GetMaxDeviceHeight()
+do
+//*** Display the screen’s dimensions ***
+PrintC("Screen width: ")
+PrintC(screenwidth)
+PrintC(" pixels Screen height: ")
+PrintC(screenheight)
+Print(" pixels")
+Sync()
+loop*/
+
+
+
+/*// Project: TestDrawLine 
+
+//*** Window title and size ***
+SetWindowTitle("Test DrawLine")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0) 
+//*** Clear the screen ***
+ClearScreen() 
+do 
+	//*** Draw a line from top-left to bottom-right *** 
+	DrawLine(0,0,100,100,255,255,0) 
+	Sync()
+loop*/
+
+
+/*
+// Project: Rectangles 
+
+//*** Window title and size ***
+SetWindowTitle("Rectangles")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0) 
+//*** Clear the screen ***
+ClearScreen() 
+//*** Create colour values ***
+red = MakeColor(255,0,0)
+green = MakeColor(0,255,0)
+blue = MakeColor(0,0,255)
+yellow = MakeColor(255,255,0)
+do 
+	//*** Draw rectangle *** 
+	DrawBox(10,10,90,90,red,green,blue,yellow,1) 
+	Sync()
+loop*/
+
+
+
+/*// Project: Ellipses
+//*** Set window title and size ***
+SetWindowTitle( "Ellipses" )
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+//*** Clear the screen ***
+ClearScreen()
+do
+//*** Draw ellipse ***
+DrawEllipse(50,50,30,10,MakeColor(Random(0,255),Random(0,255), Random(0,255)),MakeColor(Random(0,255),Random(0,255), Random(0,255)),1)
+Sync()
+Sleep(500)
+loop*/
+
+
+/*
+// Project: FirstSprite
+//*** Set window title and size ***
+SetWindowTitle("First Sprite")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+//*** Clear the screen ***
+ClearScreen()
+//*** Load image ***
+LoadImage(1,"Ball.png")
+//*** Create sprite ***
+
+CreateSprite(1,1)
+//SetSpriteSize(1,50,50)
+//SetSpriteSize(1,50,-1)
+SetSpriteSize(1,-1,50)
+do
+Sync()
+loop*/
+
+
+/*// Project: SpriteDepth
+//*** Set window title and size ***
+SetWindowTitle("Sprite Depth")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+ClearScreen()
+//*** Load images ***
+ball_img = LoadImage("Ball.png")
+poppy_img = LoadImage("Poppy.png")
+//*** Create ball sprite ***
+ball_spr = CreateSprite(ball_img)
+SetSpriteSize(ball_spr,10,-1)
+//*** Create poppy sprite on layer 9 ***
+poppy_spr = CreateSprite(poppy_img)
+SetSpriteSize(poppy_spr,20,-1)
+SetSpritePosition(poppy_spr,40,40) 
+SetSpriteDepth(poppy_spr,9)
+
+//*** Move ball sprite across the screen ***
+
+for p = 1 to 100 
+	SetSpritePosition(ball_spr,p,p) 
+	Sync()
+next p
+//*** Do nothing ***
+do 
+	Sync()
+loop*/
+
+
+
+
+/*
+SetWindowTitle("Sprite Depth")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+ClearScreen()
+//*** Load images ***
+ball_img = LoadImage("Ball.png")
+poppy_img = LoadImage("Poppy.png")
+//*** Create ball sprite ***
+ball_spr = CreateSprite(ball_img)
+SetSpriteSize(ball_spr,10,-1)
+//*** Create poppy sprite on layer 9 ***
+poppy_spr = CreateSprite(poppy_img)
+SetSpriteSize(poppy_spr,20,-1)
+SetSpritePosition(poppy_spr,40,40) 
+SetSpriteDepth(poppy_spr,9)
+
+poppy2_spr = CreateSprite(poppy_img)
+SetSpriteSize(poppy2_spr,20,-1)
+SetSpritePosition(poppy2_spr,40,40) 
+SetSpriteDepth(poppy2_spr,9)
+
+
+
+//*** Move ball sprite across the screen ***
+for p = 1 to 100
+SetSpritePosition(ball_spr,p,p)
+Sync()
+next p
+//*** Make poppies invisible ***
+SetSpriteVisible(poppy_spr,0)
+SetSpriteVisible(poppy2_spr,0)
+do
+//*** Move ball sprite across the screen ***
+for p = 1 to 100
+SetSpritePosition(ball_spr,p,p)
+Sync()
+next p
+loop*/
+
+/*
+// Project: RotateSprite 
+//*** Set window size and title ***
+SetWindowSize(1024,768,0)
+SetWindowTitle("Rotate a Sprite")
+//*** Clear the screen to grey ***
+SetClearColor(200,200,200)
+ClearScreen()
+//*** Set up sprite ***
+img = LoadImage("Arrow.png")
+spr = CreateSprite(img)
+SetSpriteSize(spr,20,-1)
+SetSpritePosition(spr,40,50)
+//*** Display continually rotating sprite ***
+do 
+	//for angle = 0 to 359 
+	for angle = 359 to 0 Step -1
+		SetSpriteAngle(spr,angle) 
+		Sync() 
+		next angle
+loop*/
+
+
+
+
+
+/*//*** Set window title and size ***
+SetWindowTitle("User Interaction")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+ClearScreen()
+do
+//*** Check for press ***
+if GetPointerPressed()=1
+Print("Pressed")
+endif
+//*** Check for release ***
+if GetPointerReleased()=1
+Print("Released")
+endif
+Sync()
+loop*/
+
+
+/*// Project: PointerPosition
+//*** Set window title and size ***
+SetWindowTitle("Pointer Position")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+//*** Clear the screen to light grey ***
+SetClearColor(200,200,200)
+ClearScreen()
+do
+//*** Get pointer’s coordinates ***
+x# = GetPointerX()
+y# = GetPointerY()
+//*** Display pointer coordinates ***
+PrintC("(")
+PrintC(x#)
+PrintC(',')
+PrintC(y#)
+Print(")")
+Sync()
+loop*/
+
+
+
+/*// Project: SpriteOver
+//*** Set window title and size ***
+SetWindowTitle("Sprite Over")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+//*** Set screen background to grey ***
+SetClearColor(120,120,120)
+ClearScreen()
+//*** Load images required ***
+ball_img = LoadImage("Ball.png")
+poppy_img = LoadImage("Poppy.png")
+//*** Create, size and position ball sprite ***
+ball_spr = CreateSprite(ball_img)
+SetSpriteSize(ball_spr, 10,-1)
+SetSpritePosition(ball_spr, 20, 33)
+//*** Create, size and position poppy sprite ***
+poppy_spr = CreateSprite(poppy_img)
+SetSpriteSize(poppy_spr, 15,-1)
+SetSpritePosition(poppy_spr, 60, 30)
+do
+//*** Get ID of any sprite under pointer ***
+spr_hit = GetSpriteHit(GetPointerX(),GetPointerY())
+//*** If a sprite is under pointer, hide it ***
+if spr_hit <> 0
+SetSpriteVisible(spr_hit,0)
+endif
+Sync()
+loop*/
+
+
+
+
+
+/*
+// Project: SpriteOver
+// Created: 2015-01-17
+//*** Set window title and size ***
+SetWindowTitle("Sprite Over")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+//*** Set screen background to grey ***
+SetClearColor(120,120,120)
+ClearScreen()
+//*** Load images required ***
+ball_img = LoadImage("Ball.png")
+poppy_img = LoadImage("Poppy.png")
+//*** Create, size and position ball sprite ***
+ball_spr = CreateSprite(ball_img)
+SetSpriteSize(ball_spr, 10,-1)
+SetSpritePosition(ball_spr, 20, 33)
+//*** Create, size and position poppy sprite ***
+poppy_spr = CreateSprite(poppy_img)
+SetSpriteSize(poppy_spr, 15,-1)
+SetSpritePosition(poppy_spr, 60, 30) 
+//*** Create text over ball ***
+ball_txt = CreateText("Visible")
+SetTextPosition(ball_txt, 20, 20)
+//*** Create text over poppy ***
+poppy_txt = CreateText("Visible")
+SetTextPosition(poppy_txt, 60, 20)
+do 
+	//*** If pointer pressed *** 
+	if GetPointerPressed() = 1 
+		//*** Get ID of any sprite under pointer *** 
+		spr_hit = GetSpriteHit(GetPointerX(),GetPointerY()) 
+		//*** If a sprite is under pointer *** 
+		if spr_hit <> 0 
+			//*** toggle its visibility *** 
+			SetSpriteVisible(spr_hit,1-GetSpriteVisible(spr_hit)) 
+			//*** If it’s the ball *** if 
+			spr_hit = ball_spr 
+			//*** Set ball text *** 
+			if GetSpriteVisible(spr_hit) = 1 
+				SetTextString(ball_txt,"Visible") 
+			else 
+				SetTextString(ball_txt, "Invisible") 
+			endif 
+			else 
+				// it’s the poppy 
+				//*** Set the poppy text *** 
+				if GetSpriteVisible(spr_hit) = 1 
+					SetTextString(poppy_txt,"Visible") 
+					else 
+						SetTextString(poppy_txt, "Invisible") 
+					endif
+			endif 
+		endif 
+	Sync()
+loop
+*/
+
+//262
+
+
+/*
+// Project: ScreenSize
+//*** Window title and size ***
+SetWindowTitle("Screen Size")
+SetWindowSize(1024,500,0)
+SetDisplayAspect(1024/500.0)
+//*** Clear the screen ***
+ClearScreen()
+//*** Get screen dimensions ***
+screenwidth = GetMaxDeviceWidth()
+screenheight = GetMaxDeviceHeight()
+//*** Get window dimensions ***
+windowwidth = GetDeviceWidth()
+windowheight = GetDeviceHeight()
+do
+//*** Display actual dimensions ***
+PrintC("Screen width: ")
+PrintC(screenwidth)
+PrintC(" pixels Screen height: ")
+PrintC(screenheight)
+Print(" pixels")
+//*** Display window dimensions ***
+PrintC("Window width: ")
+PrintC(windowwidth)
+PrintC(" pixels Window height: ")
+PrintC(windowheight)
+Print(" pixels")
+Sync()
+loop*/
+
+/*
+// Project: PercentPixel
+//*** Window title and size ***
+SetWindowTitle("Percent/Pixel")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+//*** Clear the screen ***
+ClearScreen()
+//*** Calculate pixels per percent ***
+one_percent_x# = GetDeviceWidth()/100.0
+one_percent_y# = GetDeviceHeight()/100.0
+//*** Calulate percent per pixel ***
+xpixel# = 100.0/GetDeviceWidth()
+ypixel# = 100.0/GetDeviceHeight()
+do
+//*** Calculate 1% in pixels ***
+PrintC("1% in the x direction is ")
+PrintC(one_percent_x#)
+Print(" pixels")
+PrintC("1% in the y direction is ")
+Print(" pixels")
+//*** Calculate 1 pixel as % ***
+PrintC("1 pixel represents ")
+PrintC(xpixel#)
+Print("% in the x direction")
+PrintC("1 pixel represents ")
+PrintC(ypixel#)
+Print("% in the y direction")
+Sync()
+loop*/
+
+
+/*
+// Project: TestDrawLine
+//*** Window title and size ***
+SetWindowTitle("Test DrawLine")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+//*** Create colour values ***
+red = MakeColor(255,0,0)
+yellow = MakeColor(255,255,0)
+do
+//*** Draw a line from top-left to bottom-right***
+DrawLine(0,0,100,100,red, yellow)
+
+Sync()
+loop*/
+
+/*Public Class Form1
+
+Private Sub Form1_MouseMove(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove
+	Static last As New Point
+	If e.Button = Windows.Forms.MouseButtons.Left Then
+		Me.CreateGraphics.DrawLine(Pens.Black, last.X, last.Y,e.X,e.Y)
+		End If
+		last = e.Location
+	End Sub
+End Class*/
+
+
+/*
+Private startX As Integer = 0   //start position x of line
+Private startY As Integer = 0   //start position y of line
+Private oldEndX As Integer = 0  //the previous ending position x
+Private oldEndY As Integer = 0  //the previous ending position y
+Private gBitmap As Bitmap       //bitmap to place in picturebox
+Private isMouseDown As Boolean = False  //recognize mouse down or up
+
+Private Sub picRegion_MouseDown(ByVal sender As Object,
+ByVal e As System.Windows.Forms.MouseEventArgs) _
+Handles picRegion.MouseDown
+    isMouseDown = True
+    startX = e.X
+    startY = e.Y
+End Sub
+
+Private Sub picRegion_MouseMove(ByVal sender As Object,
+        ByVal e As System.Windows.Forms.MouseEventArgs) _
+        Handles picRegion.MouseMove
+    If isMouseDown = True Then
+        //draw line during move
+        Dim g As Graphics = Graphics.FromImage(gBitmap)
+        g.DrawLine(New Pen(Me.picRegion.BackColor), startX, startY, oldEndX, oldEndY)
+        picRegion.Image = gBitmap
+
+        g.DrawLine(Pens.Black, startX, startY, e.X, e.Y)
+        picRegion.Image = gBitmap
+        
+        oldEndX = e.X
+        oldEndY = e.Y
+    End If
+End Sub
+
+Private Sub picRegion_MouseUp(ByVal sender As Object,
+ByVal e As System.Windows.Forms.MouseEventArgs) _
+Handles picRegion.MouseUp
+    isMouseDown = False
+End Sub
+
+Private Sub Form1_Load(ByVal sender As Object,
+ByVal e As System.EventArgs) Handles Me.Load
+    gBitmap = New Bitmap(picRegion.Width, picRegion.Height)
+End Sub
+*/
+
+/*
+Public Class Form1
+    Private startX As Integer = 0   'start position x of line
+    Private startY As Integer = 0   'start position y of line
+    Private oldEndX As Integer = 0  'the previous ending position x
+    Private oldEndY As Integer = 0  'the previous ending position y
+    Private gBitmap As Bitmap       'bitmap to place in picturebox
+    Private isMouseDown As Boolean = False  'recognize mouse down or up
+
+    Private Sub picRegion_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles picRegion.MouseDown
+        isMouseDown = True
+        startX = e.X
+        startY = e.Y
+    End Sub
+
+    Private Sub picRegion_MouseMove(ByVal sender As Object, _
+                                    ByVal e As System.Windows.Forms.MouseEventArgs) _
+                                    Handles picRegion.MouseMove
+        If isMouseDown = True Then
+            'draw line during move
+            Dim g As Graphics = Graphics.FromImage(gBitmap)
+            g.DrawLine(New Pen(Me.picRegion.BackColor), startX, startY, oldEndX, oldEndY)
+            picRegion.Image = gBitmap
+
+            g.DrawLine(Pens.Black, startX, startY, e.X, e.Y)
+            picRegion.Image = gBitmap
+            '
+            oldEndX = e.X
+            oldEndY = e.Y
+        End If
+    End Sub
+
+    Private Sub picRegion_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles picRegion.MouseUp
+        isMouseDown = False
+    End Sub
+
+    Private Sub Form1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        gBitmap = New Bitmap(picRegion.Width, picRegion.Height)
+    End Sub
+
+    Private Sub btnClear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClear.Click
+        gBitmap = New Bitmap(Me.picRegion.Width, Me.picRegion.Height)
+        Me.picRegion.Image = gBitmap
+    End Sub
+End Class*/
+
+/*Rectangles 262
+//*** Window title and size ***
+SetWindowTitle("Rectangles")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+do
+//*** Create random colour values ***
+col1 = MakeColor(Random(0,255),Random(0,255),Random(0,255))
+col2 = MakeColor(Random(0,255),Random(0,255),Random(0,255))
+col3 = MakeColor(Random(0,255),Random(0,255),Random(0,255))
+col4 = MakeColor(Random(0,255),Random(0,255),Random(0,255))
+//*** Draw rectangle ***
+DrawBox(10,10,90,90,col1,col2,col3,col4,1)
+Sync()
+Sleep(500)
+loop*/
+
+
+// Project: Ellipses
+/*
+//*** Window title and size ***
+SetWindowTitle("Ellipses")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+//*** Clear the screen ***
+ClearScreen()
+//*** Calculate how many pixels in 20% x direction
+xpixels# = 20* GetDeviceWidth()/100
+//*** Calculate % in y direction for same number of pixels ***
+ypercentage# = xpixels#/GetDeviceHeight() *100
+do
+//*** Draw circle ***
+DrawEllipse(50,50,20,ypercentage#,MakeColor(Random(0,255), Random(0,255),Random(0,255)),MakeColor(Random(0,255),Random(0,255), Random(0,255)),1)
+Sync()
+Sleep(500)
+loop*/
+
+
+/* Project: FirstSprite
+//*** Set window title and size ***
+SetWindowTitle("First Sprite")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+//*** Clear the screen ***
+ClearScreen()
+//*** Load image ***
+LoadImage(1, "Ball.png")
+//*** Create sprite ***
+CreateSprite(1,1)
+//*** Resize sprite ***
+SetSpriteSize(1,50,50)
+do
+Sync()
+loop*/
+
+
+/* Project: FirstSprite
+//*** Set window title and size ***
+SetWindowTitle("First Sprite")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+//*** Clear the screen ***
+ClearScreen()
+//*** Load image ***
+LoadImage(1, "Ball.png")
+CreateSprite(1,1)
+//*** Resize sprite ***
+SetSpriteSize(1,-1,10)
+//*** Display the sprite ***
+Sync()
+//*** Wait two seconds ***
+Sleep(2000)
+//*** Move the sprite to (50,50) ***
+SetSpritePosition(1,50,50)
+do
+Sync()
+loop*/
+
+/* Project: FirstSprite
+//*** Set window title and size ***
+SetWindowTitle("First Sprite")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+//*** Clear the screen ***
+ClearScreen()
+//*** Load image ***
+LoadImage(1, "Ball.png")
+//*** Create sprite ***
+CreateSprite(1,1)
+//*** Resize sprite ***
+SetSpriteSize(1,-1,10)
+//*** Display the sprite ***
+Sync()
+//*** Wait two seconds ***
+Sleep(2000)
+//*** Move the sprite across screen ***
+for p = 1 to 100
+SetSpritePosition(1,p,p)
+Sync()
+next p
+do
+Sync()
+loop*/
+
+/* Project: FirstSprite
+//*** Set window title and size ***
+SetWindowTitle("First Sprite")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+//*** Clear the screen ***
+ClearScreen()
+//*** Load image ***
+LoadImage(1, "Ball.png")
+//*** Create sprite ***
+CreateSprite(1,1)
+//*** Resize sprite ***
+SetSpriteSize(1,-1,10)
+//*** Display the sprite ***
+Sync()
+//*** Wait two seconds ***
+Sleep(2000)
+//*** Move the sprite across screen ***
+for p = 1 to 100
+SetSpritePosition(1,p,p)
+//*** and display its position ***
+PrintC("Spite's position: ")
+PrintC("(")
+PrintC(GetSpriteX(1))
+PrintC(", ")
+PrintC(GetSpriteY(1))
+Print(")")
+Sync()
+next p
+do
+Sync()
+loop*/
+
+
+
+/* Project: SpriteDepth
+//*** Set window title and size ***
+SetWindowTitle("Sprite Depth")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+//*** Clear the screen ***
+ClearScreen()
+//*** Load images ***
+ball_img = LoadImage("Ball.png")
+poppy_img = LoadImage("Poppy.png")
+//*** Create ball sprite ***
+ball_spr = CreateSprite(ball_img)
+SetSpriteSize(ball_spr,10,-1)
+//*** Create poppy sprite on layer 9 ***
+poppy_spr = CreateSprite(poppy_img)
+SetSpriteSize(poppy_spr,20,-1)
+SetSpritePosition(poppy_spr,40,40)
+SetSpriteDepth(poppy_spr,9)
+do
+//*** Move ball sprite across the screen ***
+for p = 1 to 100
+SetSpritePosition(ball_spr,p,p)
+Sync()
+next p
+loop*/
+
+
+/* Project: SpriteDepth
+//*** Set window title and size ***
+SetWindowTitle("Sprite Depth")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+ClearScreen()
+//*** Load images ***
+ball_img = LoadImage("Ball.png")
+poppy_img = LoadImage("Poppy.png")
+//*** Create ball sprite ***
+ball_spr = CreateSprite(ball_img)
+SetSpriteSize(ball_spr,10,-1)
+//*** Create poppy sprite on layer 8 ***
+poppy_spr = CreateSprite(poppy_img)
+SetSpriteSize(poppy_spr,20,-1)
+SetSpritePosition(poppy_spr,40,40)
+SetSpriteDepth(poppy_spr,8)
+//*** Create a poppy clone ***
+poppy2_spr = CloneSprite(poppy_spr)
+SetSpritePosition(poppy2_spr,20,20)
+//*** Do nothing ***
+do
+//*** Move ball sprite across the screen ***
+for p = 1 to 100
+SetSpritePosition(ball_spr,p,p)
+Sync()
+next p
+loop*/
+
+/*** Set window title and size ***
+SetWindowTitle("Sprite Depth")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+ClearScreen()
+//*** Load images ***
+ball_img = LoadImage("Ball.png")
+poppy_img = LoadImage("Poppy.png")
+//*** Create ball sprite ***
+ball_spr = CreateSprite(ball_img)
+SetSpriteSize(ball_spr,10,-1)
+//*** Create poppy sprite on layer 8 ***
+poppy_spr = CreateSprite(poppy_img)
+SetSpriteSize(poppy_spr,20,-1)
+SetSpritePosition(poppy_spr,40,40)
+SetSpriteDepth(poppy_spr,8)
+//*** Create a poppy clone ***
+poppy2_spr = CloneSprite(poppy_spr)
+SetSpritePosition(poppy2_spr,20,20)
+do
+//*** Move ball sprite across the screen ***
+for p = 1 to 100
+SetSpritePosition(ball_spr,p,p)
+Sync()
+next p
+//*** Make poppies invisible ***
+SetSpriteVisible(poppy_spr,0)
+SetSpriteVisible(poppy2_spr,0)
+loop*/
+
+
+/* Project: RotateSprite
+//*** Set window size and title ***
+SetWindowSize(1024,768,0)
+SetWindowTitle("Rotate a Sprite")
+//*** Clear the screen to grey ***
+SetClearColor(200,200,200)
+ClearScreen()
+//*** Set up sprite ***
+img = LoadImage("Arrow.png")
+spr = CreateSprite(img)
+SetSpriteSize(spr,5,-1)
+SetSpritePosition(spr,100,100)
+//
+img2 = LoadImage("Arrow.png")
+spr2 = CreateSprite(img2)
+SetSpriteSize(spr2,5,-1)
+SetSpritePosition(spr,50,50)
+//*** Display rotating sprite and its angle ***
+do
+for angle = 0 to 359
+SetSpriteAngle(spr,angle)
+Print(GetSpriteAngle(spr))
+Sync()
+next angle
+
+for angle = 359 to 0 step -1
+SetSpriteAngle(spr,angle)
+Print(GetSpriteAngle(spr))
+Sync()
+next angle
+
+for angle =179 to 89 Step -1
+SetSpriteAngle(spr2,angle)
+Print(GetSpriteAngle(spr2))
+Sync()
+next angle
+
+for angle =180 to 240 
+SetSpriteAngle(spr2,angle)
+Print(GetSpriteAngle(spr2))
+Sync()
+next angle
+loop*/
+
+/* Project: RotateSprite
+//*** Set window size and title ***
+SetWindowSize(1024,768,0)
+SetWindowTitle("Rotate a Sprite")
+//*** Clear the screen to grey ***
+SetClearColor(200,200,200)
+ClearScreen()
+//*** Set up sprite ***
+img = LoadImage("Arrow.png")
+spr = CreateSprite(img)
+SetSpriteSize(spr,20,-1)
+SetSpritePosition(spr,40,50)
+//*** Move sprite offset to centre left ***
+SetSpriteOffset(spr, 0, GetSpriteHeight(spr)/2)
+//*** Display rotating sprite and its angle ***
+do
+for angle = 0 to 359
+SetSpriteAngle(spr,angle)
+Print(GetSpriteAngle(spr))
+Sync()
+next angle
+loop*/
+
+
+/* Project: RotateSprite
+//*** Set window size and title ***
+SetWindowSize(1024,768,0)
+SetWindowTitle("Rotate a Sprite")
+//*** Clear the screen to grey ***
+SetClearColor(200,200,200)
+ClearScreen()
+//*** Set up sprite ***
+img = LoadImage("Arrow.png")
+spr = CreateSprite(img)
+SetSpriteSize(spr,20,-1)
+SetSpritePosition(spr,40,50)
+//*** Move sprite offset to centre left ***
+SetSpriteOffset(spr, 0, GetSpriteHeight(spr)/2)
+//*** Display rotating sprite and its offset ***
+do
+for angle = 0 to 359
+SetSpriteAngle(spr,angle)
+Print(GetSpriteXByOffset(spr)-GetSpriteX(spr))
+Print(GetSpriteYByOffset(spr)-GetSpriteY(spr))
+Sync()
+next angle
+loop*/
+
+
+
+/*** Set window title and size ***
+SetWindowTitle("User Interaction")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+ClearScreen()
+do
+//*** Check for held down ***
+if GetPointerState()=1
+Print("Press held")
+else
+Print("No press")
+endif
+Sync()
+loop*/
+
+
+/*** Set window title and size ***
+SetWindowTitle("Pointer Position")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+//*** Clear the screen to dark grey ***
+SetClearColor(200,200,200)
+ClearScreen()
+do
+//*** If pressed, record position ***
+if GetPointerPressed() = 1
+x# = GetPointerX()
+y# = GetPointerY()
+endif
+//*** Display coordinates of latest press ***
+PrintC("(")
+PrintC(x#)
+PrintC(",")
+PrintC(y#)
+Print(")")
+Sync()
+loop*/
+
+
+// Project: SpriteOver
+/*** Set window title and size ***
+SetWindowTitle("Sprite Over")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+//*** Set screen background to grey ***
+SetClearColor(120,120,120)
+ClearScreen()
+//*** Load images required ***
+ball_img = LoadImage("Ball.png")
+poppy_img = LoadImage("Poppy.png")
+//*** Create, size and position ball sprite ***
+ball_spr = CreateSprite(ball_img)
+SetSpriteSize(ball_spr, 10,-1)
+SetSpritePosition(ball_spr, 20, 33)
+//*** Create, size and position poppy sprite ***
+poppy_spr = CreateSprite(poppy_img)
+SetSpriteSize(poppy_spr, 15,-1)
+SetSpritePosition(poppy_spr, 60, 30)
+do
+//*** If mouse pressed or screen touched ***
+if GetPointerPressed() = 1
+//*** Get ID of any sprite under pointer ***
+spr_hit = GetSpriteHit(GetPointerX(),GetPointerY())
+//*** If a sprite is under pointer, hide it ***
+if spr_hit <> 0
+SetSpriteVisible(spr_hit,0)
+endif
+endif*/
+
+
+//fix me
+
+
+/*** If a sprite is under pointer, hide it ***
+SetWindowTitle("Sprite Over")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+//*** Set screen background to grey ***
+SetClearColor(120,120,120)
+ClearScreen()
+//*** Load images required ***
+ball_img = LoadImage("Ball.png")
+poppy_img = LoadImage("Poppy.png")
+//*** Create, size and position ball sprite ***
+ball_spr = CreateSprite(ball_img)
+SetSpriteSize(ball_spr, 10,-1)
+SetSpritePosition(ball_spr, 20, 33)
+//*** Create, size and position poppy sprite ***
+poppy_spr = CreateSprite(poppy_img)
+SetSpriteSize(poppy_spr, 15,-1)
+SetSpritePosition(poppy_spr, 60, 30)
+do
+//*** If mouse pressed or screen touched ***
+if GetPointerPressed() = 1
+//*** Get ID of any sprite under pointer ***
+spr_hit = GetSpriteHit(GetPointerX(),GetPointerY())
+//*** If a sprite is under pointer, invert it visibility it ***
+if spr_hit <> 0
+SetSpriteVisible(spr_hit,1-GetSpriteVisible(spr_hit))
+endif
+endif
+Sync()
+loop*/
+
+
+
+
+
+
+
+
+/*Activity 7.27
+// Project: TextAlignment
+//*** Set window title and size ***
+SetWindowTitle("Text Alignment")
+SetWindowSize(1024,720,0)
+SetDisplayAspect(1024/720.0)
+//*** Set screen background to grey ***
+SetClearColor(120,120,120)
+ClearScreen()
+//*** Display the text ***
+CreateText(1,"Hello world")
+SetTextPosition(1,50,12)
+CreateText(2,"Hello world")
+SetTextAlignment(2,2)
+SetTextPosition(2,50,20)
+CreateText(3,"Hello world")
+SetTextAlignment(3,1)
+SetTextPosition(3,50,28)
+do
+Sync()
+loop*/
+//go to 269
