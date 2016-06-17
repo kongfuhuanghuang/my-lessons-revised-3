@@ -1,0 +1,11 @@
+//name of program
+1st person
+uses vocalization
+driver responds to directions given by the user
+driver has health
+has relative touch controls
+directional scenes and road sprites from bottom front side and rear perspectives
+events may have 3 or more perspectives
+driver has emotions responds to hurtful commands
+driver may ignore directions unless user uses forceful commands
+records amr soundbytes for playback and virtual trips
