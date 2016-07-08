@@ -1,0 +1,183 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author huang
+ */
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class my_calculator_demo {
+ JLabel jlab;
+my_calculator_demo() {
+// Create a new JFrame container.
+JFrame jfrm = new JFrame("Calculator");
+// Specify FlowLayout for the layout manager.
+jfrm.setLayout(new FlowLayout());
+// Give the frame an initial size.
+jfrm.setSize(500, 750);
+// Terminate the program when the user closes the application.
+jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+// Make two buttons.
+    JButton jbtnOne = new JButton("One");
+JButton jbtnTwo = new JButton("Two");
+JButton jbtnThree = new JButton("Three");
+JButton jbtnFour = new JButton("Four");
+JButton jbtnFive = new JButton("Five");
+JButton jbtnSix = new JButton("Six");
+JButton jbtnSeven = new JButton("Seven");
+JButton jbtnEight = new JButton("Eight");
+JButton jbtnNine = new JButton("Nine");
+JButton jbtnZero = new JButton("Zero");
+JButton jbtnPlus = new JButton("Plus");
+JButton jbtnMinus = new JButton("Minus");
+JButton jbtnMultiply = new JButton("Multiply");
+JButton jbtnDivide = new JButton("Divide");
+JButton jbtnEqual = new JButton("Equal");
+// Add action listener for one.
+jbtnOne.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent ae) {
+jlab.setText("One");
+}
+});
+// Add action listener for two.
+jbtnTwo.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent ae) {
+jlab.setText("Two");
+}
+});
+// action listener for three
+jbtnThree.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent ae) {
+jlab.setText("Three");
+}
+});
+
+//action listener for four
+jbtnFour.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent ae) {
+jlab.setText("Four");
+}
+});
+
+// action listener for five
+jbtnFive.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent ae) {
+jlab.setText("Five");
+}
+});
+
+// action listener for SIX
+jbtnSix.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent ae) {
+jlab.setText("Six");
+}
+});
+
+// action listener for SEVEN
+jbtnSeven.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent ae) {
+jlab.setText("Seven");
+}
+});
+
+// action listener for EIGHT
+jbtnEight.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent ae) {
+jlab.setText("Eight");
+}
+});
+
+// action listener for NINE
+jbtnNine.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent ae) {
+jlab.setText("Nine");
+}
+});
+
+// action listener for ZERO
+jbtnZero.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent ae) {
+jlab.setText("Zero");
+}
+});
+
+// action listener for plus
+jbtnPlus.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent ae) {
+jlab.setText("Plus");
+}
+});
+
+// action listener for minus
+jbtnMinus.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent ae) {
+jlab.setText("Minus");
+}
+});
+
+// action listener for multiply
+jbtnMultiply.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent ae) {
+jlab.setText("Multiply");
+}
+});
+
+// action listener for divide
+jbtnDivide.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent ae) {
+jlab.setText("Divide");
+}
+});
+
+// action listener for equal
+jbtnEqual.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent ae) {
+jlab.setText("Equal");
+}
+});
+
+
+// Add the buttons to the content pane.
+jfrm.add(jbtnOne);
+jfrm.add(jbtnTwo);
+jfrm.add(jbtnThree);
+//space here
+jfrm.add(jbtnFour);
+jfrm.add(jbtnFive);
+jfrm.add(jbtnSix);
+// space here
+
+jfrm.add(jbtnSeven);
+jfrm.add(jbtnEight);
+jfrm.add(jbtnNine);
+//space here
+jfrm.add(jbtnPlus);
+jfrm.add(jbtnMinus);
+jfrm.add(jbtnMultiply);
+//space here
+jfrm.add(jbtnDivide);
+jfrm.add(jbtnEqual);
+
+// Create a text-based label.
+jlab = new JLabel("Display.");
+// Add the label to the content pane.
+jfrm.add(jlab);
+// Display the frame.
+jfrm.setVisible(true);
+}   
+public static void main(String args[]) {
+// Create the frame on the event dispatching thread.
+SwingUtilities.invokeLater(new Runnable() {
+public void run() {
+new my_calculator_demo();
+}
+});
+}
+}
+
